@@ -1,0 +1,41 @@
+﻿{
+  "manifest_version": 3,
+  "name": "LinkedIn Fresh Post Watcher",
+  "version": "1.0.0",
+  "description": "Detects new LinkedIn search posts on the content search page and notifies when fresh posts appear.",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/search/results/content*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/search/results/content*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "LinkedIn Fresh Post Watcher",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

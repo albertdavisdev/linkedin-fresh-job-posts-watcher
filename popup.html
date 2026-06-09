@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 280px;
+      font-family: Arial, sans-serif;
+      padding: 14px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .on {
+      background: #0a66c2;
+      color: white;
+    }
+
+    .off {
+      background: #ddd;
+      color: #111;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #0a66c2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>LinkedIn Fresh Post Watcher</h3>
+  <p>Detects new posts on the LinkedIn content search page and notifies when fresh posts appear.</p>
+  <p>Keep this search open:</p>
+  <p><a href="https://www.linkedin.com/search/results/content/?keywords=dubai%20job%20wordpress%20developer&origin=FACETED_SEARCH&sortBy=%5B%22date_posted%22%5D&datePosted=%5B%22past-24h%22%5D" target="_blank">LinkedIn content search</a></p>
+  <button id="toggle" class="on">Loading...</button>
+  <script src="popup.js"></script>
+</body>
+
+</html>
